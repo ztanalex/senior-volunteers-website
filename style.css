@@ -43,18 +43,17 @@ iframe {
    TOP ABOUT SECTION
    ============================ */
 #top-section {
-  background-color: #77bfa3; /* same green as header */
+  background-color: #77bfa3; /* green background */
   color: white;
   text-align: center;
   padding: 3rem 1rem;
-  font-family: "Segoe UI", sans-serif;
 }
 
 /* ============================
    NAVIGATION BAR
    ============================ */
 nav {
-  position: sticky;  /* sticks after top-section */
+  position: sticky;  /* sticks after scrolling past top-section */
   top: 0;
   left: 0;
   width: 100%;
@@ -75,30 +74,6 @@ nav a {
 
 nav a:hover {
   color: #77bfa3;
-}
-
-/* ============================
-   EVENT GALLERY
-   ============================ */
-.event-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 0;
-  list-style: none;
-}
-
-.event-gallery li {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 10px;
-}
-
-.event-gallery img {
-  width: 100%;
-  border-radius: 8px;
-  height: auto;
 }
 
 /* ============================
@@ -149,4 +124,28 @@ nav a:hover {
   font-size: 0.95rem;
   line-height: 1.3;
   font-weight: 500;
+}
+
+/* ============================
+   EVENT GALLERY (if used)
+   ============================ */
+.event-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.event-gallery li {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.event-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
 }
