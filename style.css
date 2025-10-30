@@ -57,21 +57,23 @@ iframe {
   height: 1000px;
 }
 
-
 .event-gallery {
-  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   padding: 0;
+  list-style: none;
 }
 
 .event-gallery li {
-  margin-bottom: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
 }
 
 .event-gallery img {
   width: 100%;
-  max-width: 800px;
+  border-radius: 8px;
   height: auto;
-  border-radius: 10px;
-  display: block;
-  margin-top: 0.5rem;
 }
