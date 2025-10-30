@@ -3,21 +3,34 @@ body {
   margin: 0;
   background: #f9faf9;
   color: #333;
+  /* Removed previous padding-top for fixed nav, will handle later */
 }
 
-header {
+/* ========================
+   TOP SECTION (ABOUT / HERO)
+   ======================== */
+#top-section {
   background-color: #77bfa3;
   color: white;
-  padding: 1.5rem;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
+/* ========================
+   NAVIGATION BAR
+   ======================== */
 nav {
+  position: sticky;        /* sticky nav after top section */
+  top: 0;                  /* sticks to top when scrolling */
+  left: 0;
+  width: 100%;
   background: #f0f0f0;
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 1rem;
+  z-index: 1000;           /* above content */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 nav a {
@@ -30,39 +43,23 @@ nav a:hover {
   color: #77bfa3;
 }
 
-/* Make the nav bar fixed at top */
-nav {
-  position: fixed;        /* keeps nav always on top */
-  top: 0;                 /* stick to top */
-  left: 0;
-  width: 100%;            /* full width */
-  background: #f0f0f0;    /* keep background */
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 1rem;
-  z-index: 1000;          /* above other content */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional shadow */
-}
-
-/* Add top padding to body so content isn't hidden behind nav */
-body {
-  padding-top: 80px; /* adjust based on nav height */
-}
-
-
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-
-
+/* ========================
+   SECTIONS
+   ======================== */
 section {
   padding: 2rem;
   max-width: 900px;
   margin: auto;
 }
 
+/* ========================
+   FOOTER
+   ======================== */
 footer {
   text-align: center;
   background: #333;
@@ -84,6 +81,9 @@ iframe {
   height: 1000px;
 }
 
+/* ========================
+   EVENT GRID / GALLERY
+   ======================== */
 .event-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -105,10 +105,9 @@ iframe {
   height: auto;
 }
 
-/* ============================
+/* ========================
    EVENT GRID WITH OVERLAY TEXT
-   ============================ */
-
+   ======================== */
 .event-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
