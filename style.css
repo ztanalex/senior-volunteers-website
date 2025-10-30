@@ -56,3 +56,22 @@ iframe {
   border: none;
   height: 1000px;
 }
+
+
+.event-gallery {
+  list-style: none;
+  padding: 0;
+}
+
+.event-gallery li {
+  margin-bottom: 2rem;
+}
+
+.event-gallery img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin-top: 0.5rem;
+}
