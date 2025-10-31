@@ -10,7 +10,7 @@ body {
 }
 
 /* =====================
-   FIXED TOP ABOUT + NAV
+   FIXED ABOUT SECTION
 ===================== */
 #top-section {
   position: fixed;
@@ -20,14 +20,27 @@ body {
   background-color: #77bfa3;
   color: white;
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem 2.5rem 1rem; /* More space below for nav */
   z-index: 2000;
+  box-sizing: border-box;
 }
 
-/* Navigation directly below the About section */
+#top-section h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+#top-section p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* =====================
+   FIXED NAV BAR BELOW ABOUT
+===================== */
 nav {
   position: fixed;
-  top: 110px; /* Adjust based on About section height */
+  top: 130px; /* moves nav below the green section */
   left: 0;
   width: 100%;
   background: #f0f0f0;
@@ -37,6 +50,7 @@ nav {
   padding: 1rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   z-index: 1500;
+  box-sizing: border-box;
 }
 
 nav a {
@@ -49,12 +63,15 @@ nav a:hover {
   color: #77bfa3;
 }
 
-/* Add padding so content starts below the fixed sections */
+/* =====================
+   CONTENT SECTIONS
+===================== */
 main, section {
   padding: 2rem;
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 220px; /* Enough space to clear fixed About + nav */
+  padding-top: 260px; /* clears space for fixed about + nav */
+  box-sizing: border-box;
 }
 
 /* =====================
@@ -68,7 +85,7 @@ footer {
 }
 
 /* =====================
-   BUTTONS
+   BUTTON
 ===================== */
 .button {
   background: #77bfa3;
@@ -79,7 +96,7 @@ footer {
 }
 
 /* =====================
-   EMBEDDED FORMS / IFRAME
+   IFRAME
 ===================== */
 iframe {
   width: 100%;
