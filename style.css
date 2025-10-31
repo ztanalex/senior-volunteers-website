@@ -10,17 +10,21 @@ body {
 }
 
 /* =====================
-   FIXED ABOUT SECTION
+   FIXED TOP ABOUT SECTION
 ===================== */
 #top-section {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 120px; /* fixed height for consistency */
   background-color: #77bfa3;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centers content vertically */
   text-align: center;
-  padding: 2rem 1rem 2.5rem 1rem; /* More space below for nav */
   z-index: 2000;
   box-sizing: border-box;
 }
@@ -28,11 +32,12 @@ body {
 #top-section h1 {
   margin: 0;
   font-size: 1.8rem;
+  line-height: 1.2;
 }
 
 #top-section p {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
+  margin: 0.4rem 0 0;
+  font-size: 1rem;
 }
 
 /* =====================
@@ -40,7 +45,7 @@ body {
 ===================== */
 nav {
   position: fixed;
-  top: 130px; /* moves nav below the green section */
+  top: 120px; /* sits right below the About section */
   left: 0;
   width: 100%;
   background: #f0f0f0;
@@ -64,13 +69,13 @@ nav a:hover {
 }
 
 /* =====================
-   CONTENT SECTIONS
+   MAIN CONTENT
 ===================== */
 main, section {
   padding: 2rem;
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 260px; /* clears space for fixed about + nav */
+  padding-top: 260px; /* ensures content clears fixed About + nav */
   box-sizing: border-box;
 }
 
@@ -85,7 +90,7 @@ footer {
 }
 
 /* =====================
-   BUTTON
+   BUTTON STYLE
 ===================== */
 .button {
   background: #77bfa3;
@@ -96,7 +101,7 @@ footer {
 }
 
 /* =====================
-   IFRAME
+   EMBEDDED IFRAME
 ===================== */
 iframe {
   width: 100%;
@@ -152,3 +157,5 @@ iframe {
   line-height: 1.3;
   font-weight: 500;
 }
+
+
