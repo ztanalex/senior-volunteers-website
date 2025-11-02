@@ -7,42 +7,46 @@ body {
   background: #f9faf9;
   color: #333;
   scroll-behavior: smooth;
-  padding-top: 220px; /* makes space for fixed top + nav */
+  padding-top: 220px; /* space for fixed top + nav */
   box-sizing: border-box;
 }
 
 /* =====================
-   FIXED TOP ABOUT SECTION
+   FIXED FULL-WIDTH TOP ABOUT SECTION
 ===================== */
 #top-section {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 120px;
-  background-color: #77bfa3;
+  width: 100vw;               /* full viewport width */
+  height: 120px;              /* banner height */
+  background-color: #77bfa3;  /* green background */
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;       /* centers horizontally */
-  justify-content: center;   /* centers vertically */
+  align-items: center;        /* horizontal center */
+  justify-content: center;    /* vertical center */
   text-align: center;
   z-index: 2000;
   box-sizing: border-box;
-  padding: 0 20px;           /* add breathing room on sides */
+  padding: 0 20px;
+  margin: 0;
+}
+
+#top-section h1,
+#top-section p {
+  width: 100%;
+  margin: 0;
 }
 
 #top-section h1 {
-  margin: 0;
   font-size: 1.8rem;
   line-height: 1.2;
-  width: 100%;
 }
 
 #top-section p {
-  margin: 0.4rem 0 0;
+  margin-top: 0.4rem;
   font-size: 1rem;
-  width: 100%;
 }
 
 /* =====================
@@ -50,7 +54,7 @@ body {
 ===================== */
 nav {
   position: fixed;
-  top: 120px; /* directly below the top-section */
+  top: 120px; /* directly below top-section */
   left: 0;
   width: 100%;
   background: #f0f0f0;
