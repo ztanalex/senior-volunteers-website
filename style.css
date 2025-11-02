@@ -7,6 +7,8 @@ body {
   background: #f9faf9;
   color: #333;
   scroll-behavior: smooth;
+  padding-top: 220px; /* makes space for fixed top + nav */
+  box-sizing: border-box;
 }
 
 /* =====================
@@ -17,27 +19,30 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px; /* fixed height for consistency */
+  height: 120px;
   background-color: #77bfa3;
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center; /* centers content vertically */
+  align-items: center;       /* centers horizontally */
+  justify-content: center;   /* centers vertically */
   text-align: center;
   z-index: 2000;
   box-sizing: border-box;
+  padding: 0 20px;           /* add breathing room on sides */
 }
 
 #top-section h1 {
   margin: 0;
   font-size: 1.8rem;
   line-height: 1.2;
+  width: 100%;
 }
 
 #top-section p {
   margin: 0.4rem 0 0;
   font-size: 1rem;
+  width: 100%;
 }
 
 /* =====================
@@ -45,7 +50,7 @@ body {
 ===================== */
 nav {
   position: fixed;
-  top: 120px; /* sits right below the About section */
+  top: 120px; /* directly below the top-section */
   left: 0;
   width: 100%;
   background: #f0f0f0;
@@ -71,12 +76,20 @@ nav a:hover {
 /* =====================
    MAIN CONTENT
 ===================== */
-main, section {
+main,
+section {
   padding: 2rem;
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 260px; /* ensures content clears fixed About + nav */
   box-sizing: border-box;
+}
+
+/* Specific styling for About page section */
+section:nth-of-type(2) {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* =====================
@@ -98,6 +111,11 @@ footer {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: #5ca78e;
 }
 
 /* =====================
@@ -158,25 +176,20 @@ iframe {
   font-weight: 500;
 }
 
-
-/* === Fix About Section Positioning & Centering === */
-body {
-  padding-top: 220px; /* total height of fixed #top-section + nav */
+/* =====================
+   RESPONSIVENESS
+===================== */
+@media (max-width: 600px) {
+  #top-section h1 {
+    font-size: 1.4rem;
+  }
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0.8rem;
+  }
+  section,
+  main {
+    padding: 1.5rem;
+  }
 }
-
-section {
-  padding-top: 2rem; /* normal section padding */
-}
-
-#top-section {
-  height: 100px; /* slightly reduce height for balance */
-}
-
-section:nth-of-type(2) {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-
