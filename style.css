@@ -157,3 +157,26 @@ iframe {
   line-height: 1.3;
   font-weight: 500;
 }
+
+
+/* === Fix About Section Positioning & Centering === */
+body {
+  padding-top: 220px; /* total height of fixed #top-section + nav */
+}
+
+section {
+  padding-top: 2rem; /* normal section padding */
+}
+
+#top-section {
+  height: 100px; /* slightly reduce height for balance */
+}
+
+section:nth-of-type(2) {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
